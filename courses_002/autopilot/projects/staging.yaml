@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   annotations:
-    argocd-autopilot.argoproj-labs.io/default-dest-server: https://kubernetes.default.svc
+    argocd-autopilot.argoproj-labs.io/default-dest-server: https://127.0.0.1:40971
     argocd.argoproj.io/sync-options: PruneLast=true
     argocd.argoproj.io/sync-wave: "-2"
   creationTimestamp: null
@@ -15,7 +15,7 @@ spec:
   description: staging project
   destinations:
   - namespace: '*'
-    server: '*'
+    server: 'kind-staging'
   namespaceResourceWhitelist:
   - group: '*'
     kind: '*'
