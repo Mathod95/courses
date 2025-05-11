@@ -15,7 +15,7 @@ spec:
   description: staging project
   destinations:
   - namespace: '*'
-    server: 'kind-staging'
+    server: 'https://127.0.0.1:40971'
   namespaceResourceWhitelist:
   - group: '*'
     kind: '*'

@@ -15,7 +15,7 @@ spec:
   description: production project
   destinations:
   - namespace: '*'
-    server: 'kind-production'
+    server: 'https://127.0.0.1:44821'
   namespaceResourceWhitelist:
   - group: '*'
     kind: '*'
