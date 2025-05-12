@@ -62,13 +62,13 @@ Cluster 'https://127.0.0.1:40971' added
 ```
 
 ```shell
-argocd-autopilot project create production
+argocd-autopilot project create production --dest-server 
 argocd-autopilot project create staging
 argocd-autopilot project create management
 ```
 
 ```
 argocd-autopilot app create hello-world --app github.com/Mathod95/courses/courses_002/apps/examples -p production --wait-timeout 2m
-argocd-autopilot app create hello-world2 --app github.com/Mathod95/courses/courses_002/apps/examples -p production --wait-timeout 2m
+argocd-autopilot app create hello-world --app github.com/Mathod95/courses/courses_002/apps/examples -p production --wait-timeout 2m
 argocd-autopilot app create hello-world --app github.com/Mathod95/courses/courses_002/apps/examples -p staging --wait-timeout 2m
 ```

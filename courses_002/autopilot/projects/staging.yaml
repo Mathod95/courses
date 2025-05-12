@@ -15,7 +15,7 @@ spec:
   description: staging project
   destinations:
   - namespace: '*'
-    server: '*'
+    server: https://192.168.1.23:6445
   namespaceResourceWhitelist:
   - group: '*'
     kind: '*'
