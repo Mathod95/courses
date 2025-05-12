@@ -17,3 +17,10 @@ spec:
           image: louislam/uptime-kuma:latest
           ports:
             - containerPort: 3001
+          volumeMounts:
+            - mountPath: /app/data
+              name: uptime-kuma-data
+      volumes:
+        - name: uptime-kuma-data
+          persistentVolumeClaim:
+            claimName: uptime-kuma-pvc
