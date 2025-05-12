@@ -69,5 +69,6 @@ argocd-autopilot project create management
 
 ```
 argocd-autopilot app create hello-world --app github.com/Mathod95/courses/courses_002/apps/examples -p production --wait-timeout 2m
+argocd-autopilot app create hello-world2 --app github.com/Mathod95/courses/courses_002/apps/examples -p production --wait-timeout 2m
 argocd-autopilot app create hello-world --app github.com/Mathod95/courses/courses_002/apps/examples -p staging --wait-timeout 2m
 ```
