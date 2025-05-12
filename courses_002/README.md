@@ -15,6 +15,8 @@ export GIT_REPO=https://github.com/Mathod95/courses/courses_002/autopilot
 
 ```shell
 argocd-autopilot repo bootstrap
+or
+argocd-autopilot repo bootstrap --recover
 ```
 
 ```shell
@@ -42,7 +44,7 @@ CURRENT  NAME             CLUSTER          SERVER
          kind-production  kind-production  https://127.0.0.1:44821
          kind-staging     kind-staging     https://127.0.0.1:40971
 
-❯ argocd cluster add kind-production
+❯ argocd cluster add kind-production --project production
 WARNING: This will create a service account `argocd-manager` on the cluster referenced by context `kind-production` with full cluster level privileges. Do you want to continue [y/N]? y
 {"level":"info","msg":"ServiceAccount \"argocd-manager\" created in namespace \"kube-system\"","time":"2025-05-11T17:49:02+02:00"}
 {"level":"info","msg":"ClusterRole \"argocd-manager-role\" created","time":"2025-05-11T17:49:02+02:00"}
@@ -50,7 +52,7 @@ WARNING: This will create a service account `argocd-manager` on the cluster refe
 {"level":"info","msg":"Created bearer token secret for ServiceAccount \"argocd-manager\"","time":"2025-05-11T17:49:02+02:00"}
 Cluster 'https://127.0.0.1:44821' added
 
-❯ argocd cluster add kind-staging
+❯ argocd cluster add kind-staging --project staging
 WARNING: This will create a service account `argocd-manager` on the cluster referenced by context `kind-staging` with full cluster level privileges. Do you want to continue [y/N]? y
 {"level":"info","msg":"ServiceAccount \"argocd-manager\" created in namespace \"kube-system\"","time":"2025-05-11T17:49:10+02:00"}
 {"level":"info","msg":"ClusterRole \"argocd-manager-role\" created","time":"2025-05-11T17:49:10+02:00"}
@@ -66,5 +68,6 @@ argocd-autopilot project create management
 ```
 
 ```
-argocd-autopilot app create <hello-world> --app github.com/Mathod95/courses/courses_002/apps/examples -p <PROJECT> --wait-timeout 2m
+argocd-autopilot app create hello-world --app github.com/Mathod95/courses/courses_002/apps/examples -p production --wait-timeout 2m
+argocd-autopilot app create hello-world --app github.com/Mathod95/courses/courses_002/apps/examples -p staging --wait-timeout 2m
 ```
