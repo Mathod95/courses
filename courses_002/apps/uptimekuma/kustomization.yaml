@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   - ./deployment.yaml
   - ./service.yaml
-  - ./persistentvolume.yaml
-  - ./persistentvolumeclaim.yaml
+  - ./persistent_volume.yaml
+  - ./persistent_volume_claim.yaml
