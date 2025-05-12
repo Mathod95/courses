@@ -69,7 +69,7 @@ argocd-autopilot project create management --dest-server in-cluster --project ma
 
 ```
 argocd-autopilot app create hello-world --app github.com/Mathod95/courses/courses_002/apps/examples -p production --wait-timeout 2m
-argocd-autopilot app create hello-world --app github.com/Mathod95/courses/courses_002/apps/examples -p staging --wait-timeout 2m
+argocd-autopilot app create hello-world --app github.com/Mathod95/courses/courses_002/apps/examples --p staging --wait-timeout 2m
 
 argocd-autopilot app create uptime-kuma --app github.com/Mathod95/courses/courses_002/apps/uptimekuma -p production --wait-timeout 2m
 argocd-autopilot app create uptime-kuma --app github.com/Mathod95/courses/courses_002/apps/uptimekuma -p staging --wait-timeout 2m
