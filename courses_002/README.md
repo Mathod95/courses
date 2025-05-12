@@ -63,8 +63,8 @@ Cluster 'https://127.0.0.1:40971' added
 
 ```shell
 argocd-autopilot project create production --dest-server 
-argocd-autopilot project create staging
-argocd-autopilot project create management
+argocd-autopilot project create staging --dest-server 
+argocd-autopilot project create management --dest-server in-cluster --project management --yes 
 ```
 
 ```
@@ -73,6 +73,8 @@ argocd-autopilot app create hello-world --app github.com/Mathod95/courses/course
 
 argocd-autopilot app create uptime-kuma --app github.com/Mathod95/courses/courses_002/apps/uptimekuma -p production --wait-timeout 2m
 argocd-autopilot app create uptime-kuma --app github.com/Mathod95/courses/courses_002/apps/uptimekuma -p staging --wait-timeout 2m
+
+argocd-autopilot app create uptime-kuma --app github.com/Mathod95/courses/courses_002/apps/uptimekuma --project staging --namespace uptimekuma --wait-timeout 2m
 ```
 
 
