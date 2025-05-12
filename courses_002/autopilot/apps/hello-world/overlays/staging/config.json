@@ -2,7 +2,7 @@
   "appName": "hello-world",
   "userGivenName": "hello-world",
   "destNamespace": "default",
-  "destServer": "https://kubernetes.default.svc",
+  "destServer": "https://192.168.1.23:6445",
   "srcPath": "courses_002/autopilot/apps/hello-world/overlays/staging",
   "srcRepoURL": "https://github.com/Mathod95/courses.git",
   "srcTargetRevision": "",
