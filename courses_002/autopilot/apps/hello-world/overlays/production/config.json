@@ -1,0 +1,11 @@
+{
+  "appName": "hello-world",
+  "userGivenName": "hello-world",
+  "destNamespace": "default",
+  "destServer": "https://192.168.1.23:6444",
+  "srcPath": "courses_002/autopilot/apps/hello-world/overlays/production",
+  "srcRepoURL": "https://github.com/Mathod95/courses.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": null
+}
