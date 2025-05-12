@@ -15,7 +15,7 @@ spec:
   description: production project
   destinations:
   - namespace: '*'
-    server: '*'
+    server: 'https://192.168.1.23:6444'
   namespaceResourceWhitelist:
   - group: '*'
     kind: '*'
